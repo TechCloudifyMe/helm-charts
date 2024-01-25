@@ -8,7 +8,27 @@ export PATH=$PATH:/usr/local/bin
 ```
 ## create your 1st chart
 ```
-helm create my-chart
+helm create myapp-chart
+```
+Do the modifications as per your requirement
+## install helm package
+```
+helm install <release-name> <path/to/your-chart>
+ex: helm install myapp myapp-chart
+```
+## helm command
+```
+helm list
+helm create <chart-name>
+helm install myapp myapp-chart
+helm upgrade myapp myapp-chart
+helm uninstall myapp
+```
+## to run same helm chart for multiple application
+maintain a seperate values file for each microservice
+```
+helm install <release-name> <path/to/chart> -f <path/to/values.yaml>
+helm install app1 myapp-chart -f /opt/helm-charts/app1/values.yaml
 ```
 
 --links--
