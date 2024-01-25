@@ -1,0 +1,6 @@
+auth:
+  createDatabase: true
+  database: "mysqldb"
+  username: "techcloudifyme"
+  password: "admin#123"
+
