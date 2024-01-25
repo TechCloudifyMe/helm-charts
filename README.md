@@ -39,6 +39,7 @@ https://devopscube.com/create-helm-chart/
 The NOTES.txt file in a Helm chart is used to provide post-installation or post-upgrade information and instructions to users. When a Helm chart is installed or upgraded, Helm displays the contents of the NOTES.txt file in the command-line interface to inform users about important details related to the deployment.
 
 **_helper.tpl**: In Helm, the _helpers.tpl file is a convention for creating reusable template functions and definitions that can be shared across multiple templates within the same chart.
+
 ex:
 Default Values: You can set default values for variables used throughout your chart. For instance:
 ```
