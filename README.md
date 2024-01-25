@@ -33,3 +33,6 @@ helm install app1 myapp-chart -f /opt/helm-charts/app1/values.yaml
 
 --links--
 https://devopscube.com/create-helm-chart/
+
+-**NOTES.txt**-: 
+The NOTES.txt file in a Helm chart is used to provide post-installation or post-upgrade information and instructions to users. When a Helm chart is installed or upgraded, Helm displays the contents of the NOTES.txt file in the command-line interface to inform users about important details related to the deployment.
