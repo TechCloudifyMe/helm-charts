@@ -38,8 +38,7 @@ helm install app1 myapp-chart -f /opt/helm-charts/app1/values.yaml
 In Helm, a Helm repository (or Helm repo)  serves as a centralized location for storing, sharing, and distributing Helm charts(like docker base image). Helm repositories make it easier to manage and deploy Kubernetes applications
 ```
 helm repo add helm-repo https://charts.bitnami.com/bitnami
-helm install mysql-release helm-repo/mysql --dry-run --debug -f helm/mysql/mysql-values.yaml
-helm install mysql-release helm-repo/mysql -f helm/mysql/mysql-values.yaml
+
 ```
 
 
