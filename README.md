@@ -35,6 +35,25 @@ helm install app1 myapp-chart -f /opt/helm-charts/app1/values.yaml
 --links--
 https://devopscube.com/create-helm-chart/
 
--**NOTES.txt**-: 
+**NOTES.txt**: 
 The NOTES.txt file in a Helm chart is used to provide post-installation or post-upgrade information and instructions to users. When a Helm chart is installed or upgraded, Helm displays the contents of the NOTES.txt file in the command-line interface to inform users about important details related to the deployment.
--**_helper.tpl**-: In Helm, the _helpers.tpl file is a convention for creating reusable template functions and definitions that can be shared across multiple templates within the same chart.
+
+**_helper.tpl**: In Helm, the _helpers.tpl file is a convention for creating reusable template functions and definitions that can be shared across multiple templates within the same chart.
+ex:
+Default Values: You can set default values for variables used throughout your chart. For instance:
+```
+{{/* _helpers.tpl */}}
+{{- define "mychart.labels" -}}
+    app: my-app
+    release: {{ .Release.Name | quote }}
+{{- end }}
+```
+Now, in other templates, you can include these labels easily:
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+  labels:
+    {{ include "mychart.labels" | nindent 8 }}
+```
