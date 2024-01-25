@@ -22,6 +22,7 @@ helm list
 helm create <chart-name>
 helm install myapp myapp-chart
 helm upgrade myapp myapp-chart
+helm status myapp
 helm uninstall myapp
 ```
 ## to run same helm chart for multiple application
