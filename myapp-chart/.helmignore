@@ -21,3 +21,7 @@
 .idea/
 *.tmproj
 .vscode/
+hpa.yaml
+ingress.yaml
+serviceaccount.yaml
+NOTES.txt
